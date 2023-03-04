@@ -34,4 +34,9 @@ while (insertNumbers)
         index++;
     }
 }
+Console.Clear();
 Console.WriteLine($"Equation:  {a}x + {b}y = {c}");
+double result = (double)a / (double)b;
+char[] resultAsString = result.ToString().ToCharArray();
+//char[] resultAsChar= resultAsString.ToCharArray();
+var teste =1;
