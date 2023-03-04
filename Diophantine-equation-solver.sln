@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diophantine-equation-solver", "Diophantine-equation-solver\Diophantine-equation-solver.csproj", "{B87008E4-7654-4581-9BC1-089C89A6A7EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B87008E4-7654-4581-9BC1-089C89A6A7EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87008E4-7654-4581-9BC1-089C89A6A7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87008E4-7654-4581-9BC1-089C89A6A7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87008E4-7654-4581-9BC1-089C89A6A7EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {283B5927-627F-4FA2-A6E9-5D8B14C0F01C}
+	EndGlobalSection
+EndGlobal
