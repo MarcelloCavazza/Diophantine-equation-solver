@@ -73,14 +73,15 @@ while (calcularMDC)
 
     if (r == 0)
     {
-        mdcResult = q;
+        mdcResult = b;
         calcularMDC = false;
     }
 }
 
-if(mdcResult % innitialLetterC == 0)
+if(innitialLetterC % mdcResult == 0)
 {
     Console.WriteLine("First Rule went well, maybe exists a solution!");
+    Console.WriteLine($"mdc({innitialLetterA},{innitialLetterB})|{mdcResult} = {innitialLetterC / mdcResult}");
 }
 else
 {
