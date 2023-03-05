@@ -8,6 +8,10 @@ namespace Diophantine_equation_solver
 {
     internal class MDCResults : IMDCREsults
     {
+        public MDCResults()
+        {
+        }
+
         public MDCResults(int rValue, int aValue, int bValue, int qValue) {
             this.A = aValue;
             this.B = bValue;
