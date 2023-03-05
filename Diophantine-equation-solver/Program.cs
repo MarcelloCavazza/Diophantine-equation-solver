@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-int a = 0, b = 0, c = 0;
+using Diophantine_equation_solver;
+using System.Collections.Generic;
+
+int innitialLetterA = 0, innitialLetterB = 0, innitialLetterC = 0;
 byte index = 0;
 char[] letters = new char[] {
     'a',
@@ -18,16 +21,16 @@ while (insertNumbers)
 
     if (valueInsertedByUser)
     {
-        switch (letters[index]) 
+        switch (letters[index])
         {
             case 'a':
-                a = valueAsNumber;
+                innitialLetterA = valueAsNumber;
                 break;
             case 'b':
-                b = valueAsNumber;
+                innitialLetterB = valueAsNumber;
                 break;
             case 'c':
-                c = valueAsNumber;
+                innitialLetterC = valueAsNumber;
                 insertNumbers = false;
                 break;
         }
@@ -35,6 +38,51 @@ while (insertNumbers)
     }
 }
 Console.Clear();
-Console.WriteLine($"Equation:  {a}x + {b}y = {c}");
-double result = (double)a / (double)b;
-char[] resultAsString = result.ToString().ToCharArray();
+Console.WriteLine($"Equation:  {innitialLetterA}x + {innitialLetterB}y = {innitialLetterC}");
+
+Dictionary<int, MDCResults> listOfMDCs = new Dictionary<int, MDCResults>();
+
+int mdcResult = 0;
+int r = 0;
+int a = 0;
+int b = 0;
+int q = 0;
+Boolean calcularMDC = true;
+index = 0;
+int dictionaryId = 0;
+while (calcularMDC)
+{
+    if (index == 0)
+    {
+        dictionaryId = 1;
+        a = innitialLetterA;
+        b = innitialLetterB;
+        index = 1;
+    }
+    else
+    {
+        dictionaryId = listOfMDCs.Last().Key + 1;
+        a = b;
+        b = r;
+    }
+    q = a / b;
+    r = a % b;
+    MDCResults mdcCurrentValues = new MDCResults(r, a, b, q);
+    listOfMDCs.Add(dictionaryId, mdcCurrentValues);
+
+
+    if (r == 0)
+    {
+        mdcResult = q;
+        calcularMDC = false;
+    }
+}
+
+if(mdcResult % innitialLetterC == 0)
+{
+    Console.WriteLine("First Rule went well, maybe exists a solution!");
+}
+else
+{
+    Console.WriteLine("Doesn't exist a solution");
+}
