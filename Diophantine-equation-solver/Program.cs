@@ -67,14 +67,16 @@ while (calcularMDC)
     }
     q = a / b;
     r = a % b;
-    MDCResults mdcCurrentValues = new MDCResults(r, a, b, q);
-    listOfMDCs.Add(dictionaryId, mdcCurrentValues);
-
 
     if (r == 0)
     {
         mdcResult = b;
         calcularMDC = false;
+    }
+    else
+    {
+        MDCResults mdcCurrentValues = new MDCResults(r, a, b, q);
+        listOfMDCs.Add(dictionaryId, mdcCurrentValues);
     }
 }
 
