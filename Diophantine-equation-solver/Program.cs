@@ -84,6 +84,14 @@ if(innitialLetterC % mdcResult == 0)
 {
     Console.WriteLine("First Rule went well, maybe exists a solution!");
     Console.WriteLine($"mdc({innitialLetterA},{innitialLetterB})|{mdcResult} = {innitialLetterC / mdcResult}");
+    // r = a - bq;
+    int qttOfMDCS = listOfMDCs.Count;
+    MDCResults mdc = new MDCResults();
+    listOfMDCs.TryGetValue(qttOfMDCS, out mdc);
+    if(mdc != null)
+    {
+        
+    }
 }
 else
 {
