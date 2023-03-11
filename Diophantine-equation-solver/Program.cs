@@ -86,11 +86,11 @@ if(innitialLetterC % mdcResult == 0)
     Console.WriteLine($"mdc({innitialLetterA},{innitialLetterB})|{mdcResult} = {innitialLetterC / mdcResult}");
     // r = a - bq;
     int qttOfMDCS = listOfMDCs.Count;
-    MDCResults mdc = new MDCResults();
-    listOfMDCs.TryGetValue(qttOfMDCS, out mdc);
-    if(mdc != null)
+    MDCResults current = new MDCResults();
+    for (int i = listOfMDCs.Count; i > 0; i--)
     {
-        
+        listOfMDCs.TryGetValue(qttOfMDCS, out current);
+
     }
 }
 else
